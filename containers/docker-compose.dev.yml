@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mongo:
+    env_file:
+      - ../env/database/.env.dev
+
+  client:
+    env_file:
+      - ../env/client/.env.dev
+    command: ["npm", "run", "dev"]
+
+  server:
+    env_file:
+      - ../env/server/.env.dev
