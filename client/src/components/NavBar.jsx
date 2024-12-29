@@ -1,4 +1,6 @@
 import { useState } from "react";
+import logo from "../assets/logo.png";
+import profile from "../assets/profile.png";
 
 function NavBar() {
   // State for toggling mobile menu
@@ -10,35 +12,37 @@ function NavBar() {
   }
 
   return (
-    <header className="w-full bg-gray-800 text-white p-4">
+    <header className="w-full bg-gray-800 fixed text-white p-4">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <img src="/src/assets/logo.png" alt="Logo" className="h-8" />
+          <img src={logo} alt="Logo" className="h-8" />
         </div>
 
         {/* Search Bar */}
         <div className="hidden md:flex flex-grow justify-center">
           <input
             type="text"
-            className="w-96 p-2 rounded-lg bg-gray-700 text-white focus:ring-green-600 border-none"
-            placeholder="Search..."
+            className="w-96 p-2 rounded-lg bg-gray-700 text-white focus:ring-2 border-none outline-none dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 focus:ring-gray-500"
+            placeholder="Search Memories"
           />
         </div>
 
         {/* Sign Up Button, and Hamburger on Mobile) */}
+
+        {/* profile image */}
         <div className="flex items-center space-x-4">
           <div className="hidden md:block">
             <img
-              src="/src/assets/profile.png" // Replace with actual user image or placeholder
+              src={profile} // Replace with actual user image or placeholder
               alt="User"
-              className="h-8 w-8 rounded-full border-2 border-gray-300"
+              className="h-10 w-10 rounded-full"
             />
           </div>
 
           {/* Sign out */}
           <div className="hidden md:block">
-            <button className="bg-transparent border-green-600 border px-4 py-2 rounded-lg text-white hover:bg-green-500">
+            <button className="bg-transparent border-[#ffdc00] border px-4 py-2 rounded-lg text-white hover:bg-[#ffdc00] hover:text-gray-900 transition-all">
               Sign out
             </button>
           </div>

@@ -4,7 +4,9 @@ import NavBar from "../components/NavBar.jsx";
 function MainLayout() {
   return (
     <>
-      <Outlet />
+      <div className="bg-gray-700 min-h-screen">
+        <Outlet />
+      </div>
     </>
   );
 }

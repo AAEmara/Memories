@@ -8,7 +8,9 @@ function FeedPage() {
     <>
       <NavBar />
       <ActionCall />
-      <MemoryCard />
+      <div className="pb-10">
+        <MemoryCard />
+      </div>
     </>
   );
 }
